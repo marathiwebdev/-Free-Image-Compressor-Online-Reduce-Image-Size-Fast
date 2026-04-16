@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Compressor — Toolzilla</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo"><span>Toolzilla</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="compressor.html" class="active">Image Compressor</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="tool-page container">
+        <h1 class="tool-page-title">Image <span class="gradient-text">Compressor</span></h1>
+        
+        <div class="compressor-app">
+            <div class="upload-area" id="uploadArea">
+                <p><strong>Click to upload</strong> or drag & drop</p>
+                <input type="file" id="fileInput" accept="image/*" hidden>
+            </div>
+
+            <div class="compressor-controls" id="controls" hidden>
+                <label>Compression Quality: <span id="qualityValue">75%</span></label>
+                <input type="range" id="qualitySlider" min="1" max="100" value="75" class="slider">
+                <button class="btn btn-primary" id="compressBtn">Compress Image</button>
+            </div>
+
+            <div class="preview-section" id="previewSection" hidden>
+                <div class="preview-grid">
+                    <div class="preview-card">
+                        <p>Original: <span id="originalSize"></span></p>
+                        <img id="originalPreview">
+                    </div>
+                    <div class="preview-card">
+                        <p>Compressed: <span id="compressedSize"></span></p>
+                        <img id="compressedPreview">
+                    </div>
+                </div>
+                <button class="btn btn-primary" id="downloadBtn">Download</button>
+                <button class="btn btn-secondary" id="resetBtn">Reset</button>
+            </div>
+        </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>
